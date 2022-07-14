@@ -1,0 +1,117 @@
+button{
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+.habit{
+font-size: 2.5rem;
+list-style: none;
+}
+.habit-button{
+  font-size: 2rem;
+  margin: 0 0.1em;
+  background-color: transparent;
+}
+
+.habit-button:hover{
+  opacity: 0.8;
+}
+
+.habit-increase,
+.habit-decrease{
+  color: rgb(92, 175, 205);
+}
+
+.habit-delete{
+  color: rgb(43, 43, 112);
+}
+
+.habit-count{
+  display: inline-block;
+  text-align: center;
+  font-size: 1.8rem;
+  width: 2.2rem;
+  height: 2.4rem;
+  line-height: 2.5rem;
+  margin-left: 0.2rem;
+  margin-right: 0.5rem;
+  background-color: darkorange;
+  color: aliceblue;
+  border-radius: 50%;
+}
+
+nav{
+  padding: 0.5rem;
+  background-color: lightsalmon;
+  font-size: 2.5rem;
+}
+
+.habit-logo{
+  color: azure;
+  margin: 0.5rem;
+}
+
+.habit-title{
+  color: rgb(43, 43, 112);
+  font-weight: bold;
+  margin: 0.5rem;
+}
+
+.habit-total{
+  display: inline-block;
+  text-align: center;
+  font-size: 1.8rem;
+  width: 2.2rem;
+  height: 2.4rem;
+  line-height: 2.5rem;
+  margin-left: 0.2rem;
+  margin-right: 0.5rem;
+  padding-bottom: 0.2rem;
+  background-color: rgb(92, 175, 205);
+  color: aliceblue;
+  border-radius: 50%;
+}
+
+section{
+  padding: 1.5rem;
+}
+
+form{
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.inputLabel{
+  font-size: 1.5rem;
+}
+
+.inputBox{
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  position: relative;
+  height: 1.5rem;
+  width: 8rem;
+  border-color: cornflowerblue;
+  border-radius: 10px;
+}
+
+.addButton{
+  height: 2rem;
+  width: 2.5rem;
+  background-color: rgb(92, 175, 205);
+  border-radius: 10px;
+  text-align: center;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.resetButton{
+  height: 3rem;
+  width: 4rem;
+  background-color: rgb(43, 43, 112);
+  color: aliceblue;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 2rem;
+}
