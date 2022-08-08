@@ -3,56 +3,52 @@ button{
   border: 0;
   cursor: pointer;
 }
-.habit{
-font-size: 2.5rem;
-list-style: none;
+table{
+font-size: 1.5rem;
+text-align: center;
+border: 0em;
+width: 100%;
+padding: 1rem;
 }
+
+#percent{
+  font-size: 1rem;
+}
+
 .habit-button{
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0 0.1em;
   background-color: transparent;
 }
 
 .habit-button:hover{
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 .habit-increase,
 .habit-decrease{
-  color: rgb(92, 175, 205);
+  color: rgb(49, 49, 49);
 }
 
 .habit-delete{
-  color: rgb(43, 43, 112);
-}
-
-.habit-count{
-  display: inline-block;
-  text-align: center;
-  font-size: 1.8rem;
-  width: 2.2rem;
-  height: 2.4rem;
-  line-height: 2.5rem;
-  margin-left: 0.2rem;
-  margin-right: 0.5rem;
-  background-color: darkorange;
-  color: aliceblue;
-  border-radius: 50%;
+  color: rgb(156, 58, 58);
 }
 
 nav{
   padding: 0.5rem;
-  background-color: lightsalmon;
+  margin: 1rem;
   font-size: 2.5rem;
+  text-align: center;
+  align-content: center;
 }
 
 .habit-logo{
-  color: azure;
+  color: rgb(156, 58, 58);
   margin: 0.5rem;
 }
 
 .habit-title{
-  color: rgb(43, 43, 112);
+  color: rgb(35, 35, 35);
   font-weight: bold;
   margin: 0.5rem;
 }
@@ -60,16 +56,18 @@ nav{
 .habit-total{
   display: inline-block;
   text-align: center;
-  font-size: 1.8rem;
-  width: 2.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 2.4rem;
   height: 2.4rem;
   line-height: 2.5rem;
   margin-left: 0.2rem;
   margin-right: 0.5rem;
   padding-bottom: 0.2rem;
-  background-color: rgb(92, 175, 205);
-  color: aliceblue;
   border-radius: 50%;
+  background-color: bisque;
+  position: absolute;
+  top: -0rem;
 }
 
 section{
@@ -79,39 +77,62 @@ section{
 form{
   margin-left: 3rem;
   margin-top: 1rem;
+  text-align: center;
+  padding: 0.5rem;
 }
 
 .inputLabel{
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .inputBox{
   margin: 0rem 0.5rem 0rem 0.5rem;
   position: relative;
   height: 1.5rem;
-  width: 8rem;
-  border-color: cornflowerblue;
+  border-color: rgb(49, 49, 49);
+  background-color: rgb(200, 200, 200);
   border-radius: 10px;
+}
+
+.box1{
+  width: 8rem;
+}
+.box2{
+   width: 2rem;
 }
 
 .addButton{
   height: 2rem;
   width: 2.5rem;
-  background-color: rgb(92, 175, 205);
+  background-color: rgb(51, 51, 51);
   border-radius: 10px;
   text-align: center;
   color: aliceblue;
   font-weight: bold;
 }
 
+section{
+  text-align: center;
+}
+
 .resetButton{
   height: 3rem;
   width: 4rem;
-  background-color: rgb(43, 43, 112);
+  background-color: rgb(156, 58, 58);
   color: aliceblue;
-  text-align: center;
   font-size: large;
   font-weight: bold;
   border-radius: 10px;
-  margin: 2rem;
+  margin: 1rem;
+}
+
+body, html{
+  height: 100%;
+  margin: 0;
+  background-color: rgb(200, 200, 200);
+}
+
+meter::-webkit-meter-optimum-value {
+  background: rgb(156, 58, 58);
 }

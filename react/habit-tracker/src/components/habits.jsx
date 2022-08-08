@@ -15,8 +15,8 @@ class Habits extends Component {
     this.props.delete(habit);
   };
 
-  handleAdd = (name) => {
-    this.props.onAdd(name);
+  handleAdd = (name, max) => {
+    this.props.onAdd(name, max);
   };
 
   handleReset = () => {
@@ -28,7 +28,7 @@ class Habits extends Component {
       <>
         <section>
           <Input onAdd={this.handleAdd} />
-          <ul>
+          <table>
             {this.props.habits.map((habit) => (
               <Habit
                 habit={habit}
@@ -38,7 +38,7 @@ class Habits extends Component {
                 onDelete={this.handleDelete}
               />
             ))}
-          </ul>
+          </table>
           <button className="resetButton" onClick={this.handleReset}>
             reset
           </button>

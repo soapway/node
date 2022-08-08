@@ -20,32 +20,83 @@ class Habit extends PureComponent {
   };
 
   render() {
-    const { name, count } = this.props.habit;
+    const { name, count, max } = this.props.habit;
     // props 안에 있는 요소와 같은 이름으로 한번에 변수로 빼내기
-    return (
-      <li className="habit">
-        <span className="habit-name">{name}</span>
-        <span className="habit-count">{count}</span>
-        <button
-          className="habit-button habit-increase"
-          onClick={this.handleIncreament}
-        >
-          <i className="fa-solid fa-square-plus"></i>
-        </button>
-        <button
-          className="habit-button habit-decrease"
-          onClick={this.handleDecreament}
-        >
-          <i className="fa-solid fa-square-minus"></i>
-        </button>
-        <button
-          className="habit-button habit-delete"
-          onClick={this.handleDelete}
-        >
-          <i className="fa-solid fa-trash-can"></i>
-        </button>
-      </li>
-    );
+    if (count == max) {
+      return (
+        <tr>
+          <td>{name}</td>
+          <td>
+            <meter min={0} max={max} value={count}></meter>
+          </td>
+          <td>
+            <span className="habit-done" role="img" aria-label="done">
+              💯
+            </span>
+          </td>
+          <td>
+            <button
+              className="habit-button habit-increase"
+              onClick={this.handleIncreament}
+            >
+              <i className="fa-solid fa-square-plus"></i>
+            </button>
+          </td>
+          <td>
+            <button
+              className="habit-button habit-decrease"
+              onClick={this.handleDecreament}
+            >
+              <i className="fa-solid fa-square-minus"></i>
+            </button>
+          </td>
+          <td>
+            <button
+              className="habit-button habit-delete"
+              onClick={this.handleDelete}
+            >
+              <i className="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        </tr>
+      );
+    } else {
+      return (
+        <tr>
+          <td>{name}</td>
+          <td>
+            <meter min={0} max={max} value={count}></meter>
+          </td>
+          <td id="percent">
+            {count}/{max}
+          </td>
+          <td>
+            <button
+              className="habit-button habit-increase"
+              onClick={this.handleIncreament}
+            >
+              <i className="fa-solid fa-square-plus"></i>
+            </button>
+          </td>
+          <td>
+            <button
+              className="habit-button habit-decrease"
+              onClick={this.handleDecreament}
+            >
+              <i className="fa-solid fa-square-minus"></i>
+            </button>
+          </td>
+          <td>
+            <button
+              className="habit-button habit-delete"
+              onClick={this.handleDelete}
+            >
+              <i className="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        </tr>
+      );
+    }
   }
 }
 

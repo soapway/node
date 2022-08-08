@@ -6,16 +6,18 @@ import Nav from './components/nav';
 class App extends Component {
   state = {
     habits: [
-      { id: 1, name: 'Reading', count: 0 },
-      { id: 2, name: 'Walking', count: 0 },
-      { id: 3, name: 'Cleaning', count: 0 },
+      { id: 1, name: 'Reading', count: 0, max: 10 },
+      { id: 2, name: 'Walking', count: 0, max: 3 },
+      { id: 3, name: 'Cleaning', count: 0, max: 4 },
     ],
   };
 
   handleIncrement = (habit) => {
     const habits = this.state.habits.map((item) => {
       if (item.id === habit.id) {
-        return { ...habit, count: habit.count + 1 };
+        if (item.count < item.max) {
+          return { ...habit, count: habit.count + 1 };
+        }
       }
       return item;
     });
@@ -40,10 +42,10 @@ class App extends Component {
     this.setState({ habits });
   };
 
-  handleAdd = (name) => {
+  handleAdd = (name, max) => {
     const newArray = [
       ...this.state.habits,
-      { id: this.state.habits.length + 1, name: name, count: 0 },
+      { id: this.state.habits.length + 1, name: name, count: 0, max: max },
     ];
     this.setState(() => ({
       habits: newArray,
